@@ -1,0 +1,765 @@
+<!---esta tag indica para o navegador qual
+versão do HTML deve ser utilizada para renderizar a página 
+na versao html mais recente--->
+<!DOCTYPE html>
+<!---tag para mostrar ao navegador idioma dae construcao da pagina--->
+<html lang="pt-br">
+<head> 
+    <!--aqui vão as tags destinadas ao navegador-->
+    <!---==============================--->
+    <!--tag para definir qual codificação de caracteres foi usada
+    utf 8 suporta maioria dos idiomas inclusive o portugues --->
+    <meta charset="utf-8">
+    <!--titulo será exibido na janela do navegador-->
+    <title>Exemplos de desenvolvimento</title>
+    <!--==define tamanho inicial em relação a tela screen view-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--para compatibilidade com ie-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- tag destinada aos mecanismos de busca na web==-->
+    <meta name="description" content="Curriculum pessoal - Caracteristicas profissionais - Destinado a recrutadores">
+    <meta name="keywords" content="Desenvolvimento Web - Aplicativos Web - Sites - Marketing Digital - Consultoria Digital - Provedor de Conteúdo">
+    <meta name="robots" content="exemplos, follow">
+    <!-- tag para identificar criador da pagina-->
+    <meta name="author" content="Moises Franz">
+    <meta name="reply-to" content="moisesffranz@gmail.com">
+    <!--tag para inserir logomarca na aba superior do navegador--->
+    <link rel="icon" href="#">
+    <!---tags de geolocalizacao--->
+    <meta name="geo.region" content="BR-SP"/>
+    <meta name="geo.placename" content="Santo André;"/>
+    <meta name="geo.position" content="-23.620886;-46.532045"/>
+    <meta name="ICBM" content="-23.620886, -46.532045"/>
+    <!--=============meu css =============-->
+    <link rel="stylesheet" href="estilos.css">
+    <!--css do Bootstrap referencia online-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- css do bootstrap 4.3.1 baixado  para trabalhar off line -->
+    <link rel="stylesheet" href="bootstrap.min.css"> <!--======essse sai quando estiver online-->
+</head>
+<!-- fim head -->
+
+<!--========== inicio body ===========-->
+<body class="coracordion">
+  <div class="container-fluid my-0 mx-0">
+<!--=======================================-->
+<!--========== inicio do header ===========-->
+  <header id="cabecalho" class=" mt-0 bg-light">
+  	<div class="container row d-flex justify-content-center ">
+     <a class="navbar-brand mt-2" href="logoMoi.png"target="_blank"><img src="logMoises.png" alt="nome moises" height="70" width="300"></a>
+      <h2 class="bg-transparent mt-lg-4">
+        Desenvolvedor Web Front End
+      </h2>
+    </div>
+  </header>
+<!--========== final do header ===========-->		
+<!--=======================================-->
+<!--========== inicio do navegador ===========-->
+  <nav class="d-flex justify-content-center bg-light nave">
+  <div class="row navbar navbar-expand-md ">
+  <!-- <a class="navbar-brand" href="#">Trust all will bether, just believe!</a>   classe para um logo -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegador" aria-controls="navegador" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon bg-transparent"><img src="menu-black.png" height="34" width="34"alt="imagem menu"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navegador">
+    <ul class="navbar-nav text-uppercase font-weight-bold aumFonte">
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="index.html#cabecalho">Home</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="index.html#formacao">Formação</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="index.html#visao">Visão</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="#contato">Contatos</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="javaScript.html">Java Script</a>
+      </li>
+<!--==============================-->       
+<!--==============================-->            
+<!--inicio menu suspenso -->      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menuSuspenso" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>
+          Redes Sociais</strong>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="menuSuspenso">
+          <a class="dropdown-item" href="
+            https://www.linkedin.com/in/moises-franz"target="_blank">Linkedin</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://www.facebook.com/moisesfranz/"target="_blank">Facebook 1</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://www.facebook.com/siseureka/"target="_blank">Facebook 2</a>
+        </div>
+      </li>
+<!--=== final menu suspenso===== -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-2">
+        <a href="#" class="nav-link" onclick="fonte('a');"><strong>a+</strong></a>
+      </li>
+      <li class="nav-item mr-2">
+        <a href="#" class="nav-link" onclick="fonte('d');" ><strong>a-</strong></a>
+      </li> 
+      <li class="nav-item ">
+        <a href="#" class="nav-link" onclick="history.go(0);"><strong>a</strong></a>
+      </li> 
+<!--====exemplo item de lista para links desabilitados 
+       <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>  ======-->
+    </ul>
+<!-- modelos de inputs para buscas     
+    <form class="form-inline my-0 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Localizar nesse Site" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+====== -->    
+  </div>
+ </div>
+</nav>
+ 
+<!--========== final do navegador ===========-->
+<!--=======================================-->
+<!--========== inicio sessao video =====-->
+  <section>
+      <div class="row clipe bg-dark">
+        <div class="col-sm-12 col-md-12 col-lg-12 embed-responsive embed-responsive-21by9">
+            <iframe class="embed-responsive-item"  src="bombeiros.mp4"frameborder="0" allow="accelerometer; play ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+</section>
+<!--==final sessao video =======================-->
+<!--=======================================-->
+<!--========== inicio sessao cartao =====-->
+  <section class="row bg-dark p-5">
+    <h2 class="col-12 text-white text-center font-italic">
+     Modelos de uso de cartao
+    </h2>
+     <h5 class="col-12 text-white lead pt-3 aumFonte">A classe cartões é bem usada e conta com várias formas e modelos para diversas situações. <br>
+       Abaixo criei alguns modelos e onde eles podem ser usados. <br>
+       Consultando a documentação desse Framework poderá ser encontrado outras variações dessa classe.
+     </h5>
+     <h5 id="te"class="text-danger pl-3" onmousemove="aviso1()">Framework usado.</h5>
+  </section>
+   <section class="row bg-dark pb-3 ">
+     <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+       <div class="card">
+         <div class="card-header bg-primary text-white text-center p-3">
+           <h4>Java Script</h4>
+         </div>
+         <div class="card-title text-center p-3">
+           <h4 class=" font-weight-bold">
+             <sup>R$</sup>
+             <sub>/ mensal</sub>
+           </h4>
+         </div>
+         <ul class="list-group list-group-flush text-center">
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+         </ul>
+         <div class="card-footer">
+           <p class="btn btn-outline-dark btn-block text-captalize"onclick="aviso( );">
+             Matricular
+           </p>
+         </div>
+       </div>
+     </div>
+     
+     <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+       <div class="card">
+         <div class="card-header bg-primary text-white text-center p-3">
+           <h4>HTML 5</h4>
+         </div>
+         <div class="card-title text-center p-3">
+           <h4 class=" font-weight-bold">
+             <sup>R$</sup>
+             <sub>/ mensal</sub>
+           </h4>
+         </div>
+         <ul class="list-group list-group-flush text-center">
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+         </ul>
+         <div class="card-footer">
+           <p class="btn btn-outline-dark btn-block text-captalize"onclick="aviso( );">
+             Matricular
+           </p>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+       <div class="card">
+         <div class="card-header bg-primary text-white text-center p-3">
+           <h4>CSS 3</h4>
+         </div>
+         <div class="card-title text-center p-3">
+           <h4 class=" font-weight-bold">
+             <sup>R$</sup>
+             <sub>/ mensal</sub>
+           </h4>
+         </div>
+         <ul class="list-group list-group-flush text-center">
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+         </ul>
+         <div class="card-footer">
+           <p class="btn btn-outline-dark btn-block text-captalize"onclick="aviso( );">
+             Matricular
+           </p>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+       <div class="card">
+         <div class="card-header bg-primary text-white text-center p-3">
+           <h4>PHP</h4>
+         </div>
+         <div class="card-title text-center p-3">
+           <h4 class="font-weight-bold" >
+             <sup>R$</sup>
+             <sub>/ mensal</sub>
+           </h4>
+         </div>
+         <ul class="list-group list-group-flush text-center">
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+           <li class="list-group-item">Aprenda novas tecnologias.</li>
+         </ul>
+         <div class="card-footer">
+           <p class="btn btn-outline-dark btn-block text-captalize"onclick="aviso( );">
+             Matricular
+           </p>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <section class="row bg-dark pb-3">
+     <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+        <div class="card mb-3"style="height: 30rem;">
+          <img src="produto1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Produtos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto earum sequi eos qui dolorem fugiat.</p>
+            <p class="card-text"><small class="text-muted">Visto por ultimo 2 horas atras.</small></p>
+          </div>
+        </div>
+       </div>
+
+       <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+        <div class="card mb-3" style="height: 30rem;">
+          <img src="produto1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Produtos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto earum sequi eos qui dolorem fugiat.</p>
+            <p class="card-text"><small class="text-muted">Visto por ultimo 2 horas atras.</small></p>
+          </div>
+        </div>
+       </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+        <div class="card mb-3" style="height: 30rem;">
+          <img src="produto1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Produtos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto earum sequi eos qui dolorem fugiat.</p>
+            <p class="card-text"><small class="text-muted">Visto por ultimo 2 horas atras.</small></p>
+          </div>
+        </div>
+       </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-3 p-5 cartao">
+        <div class="card mb-3" style="height: 30rem;">
+          <img src="produto1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Produtos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto earum sequi eos qui dolorem fugiat.</p>
+            <p class="card-text"><small class="text-muted">Visto por ultimo 2 horas atras.</small></p>
+          </div>
+        </div>
+       </div>
+   </section>
+<!--========== final sessao  cartao=====-->
+<!--=======================================-->
+<!--=====inicio sessao imagens ===-->
+  <section id="imagens">
+    <div class="row bg-dark justify-content-center"> 
+    <h3 class="text-white font-italic p-3">
+      Trabalhando com imagens responsivas e <br>
+      com alguns recursos do framework.
+    </h3>
+   </div>
+    <div class="row p-3">
+      <div class="col-sm-12 col-md-4 col-lg-3 py-2 px-2">
+        <a href="pain.jpg"target="_blank"><img src="painel.jpg" alt="homem manipulando holograma" class="img-fluid rounded"></a>
+      </div>
+
+      <div class="col-sm-12 col-md-4 col-lg-3 py-2 px-2">
+        <a href="calc.jpg"target="_blank"><img src="calculadora.jpg" alt="imagem de uma calculadora sobre uma mesa" class="img-fluid img-thubnail bg-danger border border-danger"></a>
+      </div>
+
+      <div class="col-sm-12 col-md-4 col-lg-3 py-2 px-2">
+        <a href="serv.jpg"target="_blank"><img src="servidores.jpg" alt="imagem de computares de grande porte" class="img-fluid rounded-circle"></a>
+      </div>
+      
+      <div class="col-sm-12 col-md-4 col-lg-3 py-2 px-2">
+        <a href="got.jpg"target="_blank"><img src="gota.jpg" alt="imagem de uma gota sobre uma folha de planta" class="img-fluid img-thubnail bg-danger"></a>
+      </div>
+    </div> 
+    
+  </section>
+<!--====final sessao imagens ===-->
+<!--=============================-->
+<!--===inicio sessao acordion-->
+<div class="row bg-dark justify-content-center"> 
+    <h3 class="text-white font-italic p-3">
+      Trabalhando com Acordion.
+    </h3>
+   </div>
+ <section class="row py-3 coracordion">
+  <div class="col-sm-12 col-md-4 col-sm-6 col-lg-3">
+   <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="primeiro">
+      <h2 class="mb-0">
+        <button class="btn btn-link acord" type="button" data-toggle="collapse" data-target="#um" aria-expanded="true" aria-controls="um">
+          Primeiro Grupo de informações 
+        </button>
+      </h2>
+    </div>
+
+    <div id="um" class="collapse show" aria-labelledby="primeiro" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur sit cupiditate earum vitae, sapiente itaque quidem neque, odit excepturi autem ipsum. Modi, odit facilis, ex temporibus tempora unde! Magni cum sequi totam nisi, consectetur similique, dignissimos dolor tempora impedit.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#dois" aria-expanded="false" aria-controls="dois">
+          Segundo Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="dois" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse aperiam earum quos facere possimus fugiat asperiores consectetur perspiciatis sunt, error dicta nulla illo illum! Minima laboriosam enim officia autem, quia laborum accusamus, nisi labore! Eius id, in nobis. Commodi, enim.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#tres" aria-expanded="false" aria-controls="tres">
+          Terceiro Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="tres" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam molestiae fuga inventore tempore facere explicabo id quo voluptatum, nihil magni cupiditate fugiat voluptates illum rem deleniti culpa nisi numquam quam reiciendis, laborum temporibus sint nostrum at? Nostrum, doloremque animi excepturi.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-12 col-md-4 col-sm-6 col-lg-3">
+<div class="accordion" id="accordionExample">
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#quatro" aria-expanded="false" aria-controls="quatro">
+          Quarto Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="quatro" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia maxime officiis, est, in labore repellendus, cumque dolores delectus et quod mollitia eos quis libero accusamus non consectetur quos nulla nobis doloremque dolor, suscipit eaque minima culpa. Repudiandae repellendus molestiae quos.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link acord" type="button" data-toggle="collapse" data-target="#cinco" aria-expanded="true" aria-controls="cinco">
+          Quinto Grupo de informações
+        </button>
+      </h2>
+    </div>
+
+    <div id="cinco" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem possimus quos voluptatum, atque in repellendus dicta, nisi quod, eaque provident commodi a fugit. Doloribus libero, cumque, cum similique eos ipsam illo corporis atque recusandae consequatur suscipit modi accusantium nisi! Porro.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#seis" aria-expanded="false" aria-controls="seis">
+          Sexto Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="seis" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi alias amet repellendus accusantium provident corporis voluptas numquam at itaque vero, quo a, reprehenderit eligendi quae cupiditate quas beatae doloremque eveniet, inventore optio. Dolorem ut amet molestiae deleniti dignissimos fugit quis.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-12 col-md-4 col-sm-6 col-lg-3">
+   <div class="accordion" id="accordionExample">
+  
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#nove" aria-expanded="false" aria-controls="nove">
+          Sétimo Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="nove" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, architecto quisquam blanditiis, unde sit assumenda quod non ex ab labore asperiores tenetur quam, veritatis facilis voluptatum voluptate quis necessitatibus suscipit eveniet! Quaerat soluta eos ut, aperiam quo voluptas hic voluptatum?
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#oito" aria-expanded="false" aria-controls="oito">
+          Oitavo Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="oito" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non repellendus culpa odio accusamus eum quos, saepe voluptatem quibusdam enim veritatis labore, consectetur ut natus, iure voluptate minima dolores quae. Quaerat, iste libero ea asperiores. Laborum perferendis minima totam sequi reiciendis.
+      </div>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link acord" type="button" data-toggle="collapse" data-target="#sete" aria-expanded="true" aria-controls="sete">
+          Nono Grupo de informações
+        </button>
+      </h2>
+    </div>
+
+    <div id="sete" class="collapse show acord" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem blanditiis magni deserunt laborum accusantium quisquam, tempora dolores eius. Et expedita nobis molestiae, officiis amet itaque vel labore excepturi veniam, ex nihil numquam aliquam, porro consequuntur pariatur impedit!
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12 col-md-4 col-sm-6 col-lg-3">
+   <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link acord" type="button" data-toggle="collapse" data-target="#dez" aria-expanded="true" aria-controls="dez">
+          Décimo Grupo de informações
+        </button>
+      </h2>
+    </div>
+
+    <div id="dez" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quasi excepturi voluptas magni, libero, inventore officia odio distinctio odit vero architecto blanditiis. Aut veritatis corporis neque voluptatibus laborum beatae ratione. Suscipit ad aliquam, labore facilis veritatis provident ut quaerat eligendi.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#onze" aria-expanded="false" aria-controls="onze">
+          Décimo Primeiro Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="onze" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ipsa eum sed dolorem quae iusto sapiente sit provident, magnam similique amet officiis vel et tempora cupiditate quaerat neque blanditiis delectus ullam porro. Quibusdam odio alias commodi maiores non temporibus cum?
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed acord" type="button" data-toggle="collapse" data-target="#doze" aria-expanded="false" aria-controls="doze">
+          Décimo Segundo Grupo de informações
+        </button>
+      </h2>
+    </div>
+    <div id="doze" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body aumFonte">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis maiores nisi nesciunt, iure quo odit iusto, distinctio adipisci eum voluptatum porro unde quidem delectus ipsa doloremque molestiae minima temporibus repellat quaerat odio natus! Obcaecati consectetur iste eos cumque cum ipsam!
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!--===final sessao acordion-->
+<!--=============================-->
+<!--=== inicio sessao grid====--->
+  <section>
+   <div class="row bg-dark justify-content-center"> 
+    <h3 class="text-white font-italic p-3">
+      Trabalhando pensando em "First Mobile"
+    </h3>
+   </div> 
+    <div class="row grides py-3 px-5">
+      <h1 class="p-3 ">
+        Fiz essa sessão para dar um exemplo bem simples e comum sobre responsividade e navegação por diferentes telas. <br>
+        A cor do background (fundo) e o tamanho da fonte dessa sessão mudarão conforme o tamanho da media (screen). <br>
+        Experimente você mesmo , diminuindo e aumentando a tela, então você perceberá as mudanças. 
+      </h1>
+      <h5 class="p-3 aumFonte">
+        Este tipo de definição é normalmente usado para proporcionar ao usuário uma melhor esperiência de navegação em diferentes tamanhos de telas. <br>
+        Técnicas diversas são usadadas para esse objetivo que é denominado UX. <br> 
+        Pois desta forma os elementos (objetos) da view (screen) são ajustados para uma melhor visualização. <br>
+        A maioria dos Frameworks disponiveis no mercado atualmente dispoêm de funções para tornar sites e aplicativos responsivos. </h5>
+      <h5 class="font-italic font-weight-bold">  
+        O tamanho da fonte exageradamente grande nessa sessão é para que seja melhor notada as diferenças, assim como as cores de fundo também.
+      </h5>
+     
+    </div>
+  </section>
+<!-- ====final sessao grid============ -->
+
+<!--=======================================-->
+<!--=======================================-->
+<!--=======================================-->
+<!--<a href="#" data-toggle="tooltip" title="Este é um simples exemplo, <br> 
+    a pagina php não esta disponivel aqui no GitHub.">saiba mais</a>-->
+<!-- Generated markup by the plugin -->
+<div class="tooltip bs-tooltip-top" role="tooltip">
+  <div class="arrow"></div>
+  <div class="tooltip-inner">
+  </div>
+</div>
+<!--=======================================-->
+<!--=======================================-->
+<!--=======================================-->
+<!--=======================================-->
+<!--========== sessao contato =====-->
+ <section id="contato" class="coracordion">
+   <div class="col text-center">
+       <h3 class="text-center pb-1 py-xm-3 pt-lg-5 font-italic ">
+        Contatos
+       </h3> 
+    </div>
+    <div class="row my-0 coracordion">
+     <div class="col-sm-12 col-md-12 col-lg-6 my-0 p-lg-5">
+        <div class="card card-body bg-secondary">
+            <!-- titulo -->
+            <div class="card-title text-center text-white">
+               <h3 class="text-white">Preencha os campos abaixo</h3> 
+            </div>
+            <!-- final do titulo -->
+          <form action="../_php/enviar.php" method="post"> 
+                <!-- formulario  -->
+            <div class="form-group mt-3">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="seu nome" required="">
+            </div> 
+            <!-- email  -->
+             <div class="form-group mt-3">
+                <input type="email" class="acessibilidade form-control" id="email" name="email" placeholder="seu email" required="" >
+            </div>    
+            <!-- telefone -->
+             <div class="form-group mt-3">
+                <input type="tel" class="form-control" placeholder="telefone" id="tel" name="tel" required="">
+            </div>
+            <div class="form-group mt-3">
+                <input type="text" class="form-control" placeholder="assunto" id="assunto" name="assunto" required="">
+            </div>
+            <div class="form-group mt-3">
+               <textarea class="form-control" id="msg" name="msg" rows="3" data-rule="required" data-msg="Digite aqui sua mensagem"></textarea>
+            </div>
+          <!--  <a href="#" data-toggle="tooltip" title="Este é um simples exemplo, <br> 
+    a pagina php não esta disponivel aqui no GitHub.">saiba mais</a>-->
+            <button type="submit" onclick="aviso()" class="btn btn-outline-dark btn-block text-uppercase"><a class="text-white" href="#" data-toggle="tooltip" title="Este é um simples exemplo,
+            a pagina PHP não esta disponivel aqui no GitHub.">Enviar Mensagem</a></button>
+        </form>
+        </div>
+    </div>
+   <!-- google maps -->
+   <div class="col-md-12 col-md-12 col-lg-6  my-0 p-lg-5 coracordion"> 
+    <div class="card card-body bg-white text-center ">
+      <iframe class="tam"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.518011761138!2d-46.53445328502115!3d-23.621612884653036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d496f2ba4f9%3A0xbaea9d2c6e9c826d!2sR.+Etrusca+-+Utinga%2C+Santo+Andr%C3%A9+-+SP%2C+09230-100!5e0!3m2!1spt-BR!2sbr!4v1565059203144!5m2!1spt-BR!2sbr" width="" height="370" frameborder="0" style="border:0" allowfullscreen></iframe><br>
+      <a href="#cabecalho" class="text-white btn btn-dark text-uppercase">  Inicio da Página
+      </a>
+     </div>
+    </div>
+  </div> 
+</section>
+<!--========== final sessao contato =====-->
+<!--=======================================-->
+<!--========== sessao redes sociais =====-->
+ <section class="container coracordion">
+
+  <h3 class="text-center mt-5 mb-3 font-italic ">Veja-me nas Redes Sociais</h3>
+   <p class="text-center my-4">
+    <a href="https://www.linkedin.com/in/moises-franz" target="_blank"><img src="linkedin.png" alt="simbolo do linkedin"height="70" width="70"></a>
+   
+    <a href="https://www.facebook.com/siseureka/" target="_blank"><img src="facebook.png" class="ml-4" alt="simbolo do facebook" height="64" width="64"></a>
+  
+    <a href="#"><img src="github.png" class="ml-4" onclick="aviso( );"alt="simbolo do github"height="70" width="70"></a>
+   
+    <a href="#"><img src="instagram.png" class="ml-4" onclick="aviso( );"alt="simbolo do instagram"height="70" width="70"></a>
+   
+    <a href="#"><img src="social-tw.png" class="ml-4" onclick="aviso( );"alt="simbolo do Twitter"height="70" width="70"></a>
+   </p>
+ </section>
+<!--========== final sessao redes sociais=====-->
+<!--=======================================-->
+<!--========== inicio do footer ===========-->
+  <!--========== inicio do footer ===========-->
+  <footer class="row rodape">
+     <!--endereços  -->
+         <div class="col-sm-10 col-md-6 col-lg-3 my-3">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+             <div class="card-body text-white">
+              <a href="#"><img src="home_ico.png" width="43" height="43" alt="imagem de uma casa"></a>
+               <h4 class="card-title text-capitalize">
+                 Endereços
+               </h4>
+              
+               <h6 class="card-text">
+                Rua Etrusca  <br>
+                Vila Metalúrgica 
+                Santo André - SP <br>    
+               </h6>  
+             </div> 
+           </div>   
+         </div>
+        <!-- final endereços  -->
+       <!--endereços  -->
+         <div class="col-sm-6 col-md-6 col-lg-3 my-3">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+             <div class="card-body text-white">
+              <a href="#"><img src="tel.png" width="43" height="43" alt="imagem de um telefone"></a>
+               <h4 class="card-title text-capitalize">
+                Telefones
+               </h4>
+               <h6 class="card-text">  
+                (xx) xxxxx - xxxx <br>
+                (xx) xxxxx - xxxx 
+               </h6> 
+           </div>
+          </div>   
+         </div>
+        <!-- final endereços  -->
+        <!--endereços  -->
+         <div class="col-sm-6 col-md-6 col-lg-3 py-3 ">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body text-white">
+              <a href="#"><img src="ema.png" width="43" height="43" alt="imagem de um envelope"></a>
+               <h4 class="card-title text-capitalize">E-mails</h4>
+               <h6 class="card-text">
+                mffranz@gmail.com <br>
+                mfsuportetecnico@gmail.com
+               </h6>
+           </div> 
+         </div>   
+         </div>
+        <!-- final endereços  -->
+        <!--endereços  -->
+         <div class="col-sm-6 col-md-6 col-lg-3 my-3">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body text-white">
+              <a href="#"><img src="cloc.png" width="43" height="43" alt="imagem de um relogio"></a>
+               <h4 class="card-title text-capitalize">Horários de Atendimento</h4>
+               <h6 class="card-text">
+                Segunda a Sexta <br>
+                08 : 00 as 18 : 00 
+               </h6>
+           </div> 
+         </div>   
+         </div>
+        <!-- final endereços  -->  
+        <h6 class="bg-transparent text-white ml-5 mt-0 mb-4 font-italic">
+            Copyright © Moises Franz 2020. Todos os direitos são reservados.
+        </h6> 
+</footer>
+<!-- Modal -->
+<div class="modal fade" id="meumodal" tabindex="-1" role="dialog" aria-labelledby="meumodal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="meumodal">Conhecendo mais.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Para obter mais informações sobre mim e <br>
+           também sobre meus projetos em andamentos, <br>
+           acesse minhas redes sociais. <br>
+           Obrigado.
+        </p>
+        <a href="https://www.facebook.com/siseureka/"target="_blank"><img src="facebook.png" width="56" height="56" alt="simbolo facebook"></a>
+
+         <a href="https://www.linkedin.com/in/moises-franz"target="_blank"><img src="linkedin.png"width="60" height="65"  alt="icone linkedin"></a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====final modal====-->
+</div>
+<!-- primeiro por convenção jquery e segue a ordem abaixo -->
+<!--arquivos usados aqui para trabalhar offline quando online serão excluidos -->
+<script src="jquery-3.4.1.min.js"></script>  
+<script src="bootstrap.bundle.min.js"></script> 
+<script src="bootstrap.min.js"></script>
+
+<!-- arquivo js para fonte Awesome usada no meu site -->
+<script src="all.js"></script>
+<!-- ===============================================================================-->
+<!-- JavaScript (Opcional) -->
+<script src="../_js/meuJava.js"></script>
+<!--links para referencia do jQuery , Popper js, Bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <!--=====final objetos do body====================================================================-->
+</body>
+</html>

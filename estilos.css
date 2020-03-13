@@ -1,0 +1,137 @@
+@charset"UTF-8";
+.nave{
+	z-index: 1;
+}
+
+li a:hover{
+	color: #ffffff;
+	background-color: #666666;
+	border-radius: 10px 0px 10px 0px;	
+}
+li a{
+	color: #333333;
+}
+.coracordion {
+	background-color: #CCCCCC;
+}
+.cinzaclaro{
+	background-color: #F3F3F3;
+}
+.textcaroussel{
+    letter-spacing: 2px;
+}
+.imglateral{
+	background: url("imglateral.jpg")300px 0px/cover no-repeat fixed;
+}
+.rodape{
+	background-color: #000000;
+}
+#imgFundoBannerJava{
+	background: url("sobre.jpg")250px -200px/cover no-repeat fixed;
+}
+.btcar{
+    width: 40px;
+    height: 30px;
+    margin-left: 5px;
+    align-items: center; 
+}
+.imgCart{
+	justify-content: center;
+	width: 270px;
+	height:270px;
+}
+.seletor{
+	width: 50px;
+	margin-left: 5px;
+}
+.fundo{
+  color: #ffffff;
+}
+
+/* First mobile
+  para outros tamanhos de telas*/
+@media screen and (min-width: 374px){
+	/*374px e acima */
+	.grides{
+
+ 		background-color : #FFFF99;
+ 	}
+ 	.grides h1{
+ 		padding-top: 10px;
+ 		color: blue;
+ 		font-size: 24px;
+ 	}
+ 	.grides h5{
+ 		padding-top: 10px;
+ 		color: dark;
+ 		font-size: 20px;
+ 	}	
+} 
+@media screen and (min-width: 576px){
+ 	/*576 px e acima**/
+ 	.grides{
+
+ 		background-color : #FFFF00;
+ 	}
+ 	.grides h1{
+ 		padding-top: 10px;
+ 		color: black;
+ 		font-size: 26px;
+ 	}
+ 	.grides h5{
+ 		padding-top: 10px;
+ 		color: black;
+ 		font-size: 22px;
+ 	}	
+}	
+ @media screen and (min-width: 768px){
+ 	/*768 px e acima**/
+ 	.grides{
+
+ 		background-color : #3366FF;
+ 	}
+ 	.grides h1{
+ 		padding-top: 10px;
+ 		color: white;
+ 		font-size: 28px;
+ 	}
+ 	.grides h5{
+ 		padding-top: 10px;
+ 		color: white;
+ 		font-size: 24px;
+ 	}	
+ }
+ @media screen and (min-width: 992px){
+ 	/*992 px e acima**/
+.grides{
+
+ 		background-color : #00FF66;
+ 	}
+ 	.grides h1{
+ 		padding-top: 10px;
+ 		color: black;
+ 		font-size: 30px;
+ 	}
+ 	.grides h5{
+ 		padding-top: 10px;
+ 		color: black;
+ 		font-size: 26px;
+ 	}	
+ }	
+ @media screen and (min-width: 1200px){
+ 	/*1200 px e acima**/
+.grides{
+
+ 		background-color : #0099CC;
+ 	}
+ 	.grides h1{
+ 		padding-top: 10px;
+ 		color: white;
+ 		font-size: 32px;
+ 	}
+ 	.grides h5{
+ 		padding-top: 10px;
+ 		color: black;
+ 		font-size: 28px;
+ 	}	
+}	

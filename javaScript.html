@@ -1,0 +1,962 @@
+<!---esta tag indica para o navegador qual
+versão do HTML deve ser utilizada para renderizar a página 
+na versao html mais recente--->
+<!DOCTYPE html>
+<!---tag para mostrar ao navegador idioma dae construcao da pagina--->
+<html lang="pt-br">
+<head> 
+    <!--aqui vão as tags destinadas ao navegador-->
+    <!---==============================--->
+    <!--tag para definir qual codificação de caracteres foi usada
+    utf 8 suporta maioria dos idiomas inclusive o portugues --->
+    <meta charset="utf-8">
+    <!--titulo será exibido na janela do navegador-->
+    <title>Exemplos usando Java Script</title>
+    <!--==define tamanho inicial em relação a tela screen view-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--para compatibilidade com ie-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- tag destinada aos mecanismos de busca na web==-->
+    <meta name="description" content="Curriculum pessoal - Caracteristicas profissionais - Destinado a recrutadores">
+    <meta name="keywords" content="Desenvolvimento Web - Aplicativos Web - Sites - Marketing Digital - Consultoria Digital - Provedor de Conteúdo">
+    <meta name="robots" content="javaScript, follow">
+    <!-- tag para identificar criador da pagina-->
+    <meta name="author" content="Moises Franz">
+    <meta name="reply-to" content="moisesffranz@gmail.com">
+    <!--tag para inserir logomarca na aba superior do navegador--->
+    <link rel="icon" href="#">
+    <!---tags de geolocalizacao--->
+    <meta name="geo.region" content="BR-SP"/>
+    <meta name="geo.placename" content="Santo André;"/>
+    <meta name="geo.position" content="-23.620886;-46.532045"/>
+    <meta name="ICBM" content="-23.620886, -46.532045"/>
+    <!--=============meu css =============-->
+    <link rel="stylesheet" href="estilos.css">
+    <!--css do Bootstrap referencia online-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- css do bootstrap 4.3.1 baixado  para trabalhar off line -->
+    <link rel="stylesheet" href="bootstrap.min.css"> <!--======essse sai quando estiver online-->
+</head>
+<!-- fim head -->
+
+<!--========== inicio body ===========-->
+<body class="container-fluid my-0 mx-0 cinzaclaro">
+<!--=======================================-->
+<!--========== inicio do header ===========-->
+  <header id="cabecalho" class=" mt-0 bg-light">
+    <div class="container row d-flex justify-content-center ">
+     <a class="navbar-brand mt-2" href="logoMoi.png"target="_blank"><img src="logMoises.png" alt="nome moises" height="70" width="300"></a>
+      <h2 class="bg-transparent mt-lg-4">
+        Desenvolvedor Web Front End
+      </h2>
+    </div>
+  </header>
+<!--========== final do header ===========-->   
+<!--=======================================-->
+<!--========== inicio do navegador ===========-->
+  <nav class="d-flex justify-content-center bg-light nave">
+  <div class="row navbar navbar-expand-md ">
+  <!-- <a class="navbar-brand" href="#">Trust all will bether, just believe!</a>   classe para um logo -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegador" aria-controls="navegador" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon bg-transparent"><img src="menu-black.png" height="34" width="34"alt="imagem menu"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navegador">
+    <ul class="navbar-nav text-uppercase font-weight-bold aumFonte">
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="index.html#cabecalho">Home</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="index.html#formacao">Formação</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="index.html#visao">Visão</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="exemplos.html"target="_blank">Modelos</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="#contato"target="_blank">Contatos</a>
+      </li>
+<!--==============================-->            
+<!--inicio menu suspenso -->      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menuSuspenso" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Redes Sociais
+        </a>
+        <div class="dropdown-menu" aria-labelledby="menuSuspenso">
+          <a class="dropdown-item" href="
+            https://www.linkedin.com/in/moises-franz"target="_blank">Linkedin</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://www.facebook.com/moisesfranz/"target="_blank">Facebook 1</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://www.facebook.com/siseureka/"target="_blank">Facebook 2</a>
+        </div>
+      </li>
+<!--=== final menu suspenso===== -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-2">
+        <a href="#" class="nav-link" onclick="fonte('a');"><strong>a+</strong></a>
+      </li>
+      <li class="nav-item mr-2">
+        <a href="#" class="nav-link" onclick="fonte('d');" ><strong>a-</strong></a>
+      </li> 
+      <li class="nav-item ">
+        <a href="#" class="nav-link" onclick="history.go(0);"><strong>a</strong></a>
+      </li> 
+    </ul>
+  </div>
+ </div>
+</nav>
+<!--========== final do navegador ===========-->
+<!--=======================================-->
+
+<section class="container-fluid text-white bg-dark p-3">
+  <div class="row justify-content-center">
+    <h2 class=" p-3 font-italic "> Java Script  </h2>          
+  </div>  
+
+  <div class=" row ">
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-lg-5">
+      <h4>
+        O java Script como elemento de interação entre objetos da página e usuários.
+      </h4>
+      <p class="pt-3 aumFonte">
+        Nessa página desenvolverei alguns elementos e algumas interações. <br>
+        Usarei eventos básicos mais usados na maioria das páginas que estão na web. <br>
+        tudo será desenvolvido apenas para exemplos de conteúdo. <br>
+        Através do id , name e class podemos alterar estilos , textos e objetos entre outros elementos. <br>
+        Podemos também criar funções diversas,para tornar a interação com o usuário mais dinâmica.
+      </p>
+    </div>
+    <div id="imgFundoBannerJava" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-lg-3"></div>
+</div>
+</section> 
+<!--====================================-->
+
+<section class="text-dark bg-light p-3">
+
+ <div class="row justify-content-center"> 
+   <h2 class=" p-3 font-italic "> Lojinha da Naná </h2> 
+  </div>
+  <div class="row "> 
+   <h4 class=" p-3 font-italic "> Exemplo de lógica de programação e interação com objetos JScript , <br>
+   Simulando uma página básica de uma loja virtual. </h4> 
+  </div>  
+  <!---=============================--->
+ <!---inicio exemplo--->
+<div class=" row ">
+  <!---inicio primeiro produto vestido verao --->
+   <div class="card col-sm-12 col-md-4 col-lg-4 col-xl-3 p-3">
+         <div class="card-header text-white text-center bg-dark font-italic p-2">
+           <h4>Vestido Verão 2020</h4>
+         </div>
+         <img id="imgVestido"src="vest-verde.jpg" class="card-img-top imgCart" alt="vestido verde">
+  
+         <div class="card-text ">
+           <h6 class="pl-2 pt-3">Lançamento exclusivo verão 2020. <br>
+               Parcelamento em até 6x. <br>
+               Compra com seguro garantias. 
+           </h6>
+           
+           <h5 class="text-center">
+             <strong>R$ 160,00 / unidade </strong>
+           </h5>
+     <hr>  
+            <!---inicio pedidos vestido de verao--->
+              <div class="" id="pedidoAz">
+                <h6 class="font-weight-bold">
+                  Itens selecionados: 
+                </h6> 
+
+                <h6 class="font-weight-bold">
+                    <div> Total itens :  <span id="quantVestidos"></span> </div>
+                    <div> Valor :        <span id="valorVestidos"></span> </div>
+                  </h6>
+              </div>
+            <!---final pedidos vestido verao --->
+         </div>
+
+         <div class="card-footer">
+         <h5 class="font-weight-bold"> Escolha a quantidade , e a Cor  : </h5>
+        
+            <span class="font-weight-bold pl-3 ">COR</span> 
+            <span class="font-weight-bold pl-3 ">Peq</span>
+            <span class="font-weight-bold pl-4 ">Med</span>
+            <span class="font-weight-bold pl-4 ">Grd</span>
+              <p class="my-0">
+                 <button class="btn text-captalize bg-primary font-weight-bold" onclick="corVestido()">Ver</button>
+                                <select name="" id="pA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="my-0">   
+                <button class="btn text-captalize bg-danger font-weight-bold"onclick="corVestido1()">Ver</button>
+                                 <select name="" id="pR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="my-0">  
+              <button class="btn text-captalize bg-success font-weight-bold"onclick="corVestido2()">Ver</button>
+                                 <select name="" id="pV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="mt-2">
+              <button class="btn bg-warning font-weight-bold"onclick="adcVestido()">Adicionar</button>
+              <button class="btn bg-danger font-weight-bold"onclick="limpaVest()">Cancelar</button>
+            </p>  
+        </div>     
+      </div>
+
+      <!---final primeiro produto--->   
+   <!--=========================================-->
+      <!--- inicio segundo produto--->
+
+       <div class="card col-sm-12 col-md-4 col-lg-4 col-xl-3 p-3">
+
+         <div class="card-header text-white text-center bg-dark font-italic p-2">
+           <h4>Look Bad Girl</h4>
+         </div>
+
+         <img id="imgBad" src="cami-azul.jpg " class="card-img-top imgCart" alt="garota com camiseta azul">
+  
+         <div class="card-text ">
+
+           <h6 class="pl-2 pt-3">Lançamento exclusivo verão 2020. <br>
+               Parcelamento em até 6x. <br>
+               Compra com seguro garantias. 
+           </h6>
+           
+           <h5 class="font-weight-bold text-center">
+               R$ 230,00 / conjunto 
+           </h5>
+     <hr>  
+            <!---inicio pedidos bad girl--->
+              <div class="" id="pedidoAz">
+                <h6 class="font-weight-bold">
+                  Itens selecionados: 
+                </h6> 
+
+                <h6 class="font-weight-bold">
+                    <div> Total itens :  <span id="quantBad"></span> </div>
+                    <div> Valor :        <span id="valorBad"></span> </div>
+                  </h6>
+              </div>
+            <!---final pedidos bad girl--->
+         </div>
+
+         <div class="card-footer">
+         <h5 class="font-weight-bold"> Escolha a quantidade , e a Cor  : </h5>
+        
+            <span class="font-weight-bold pl-3 ">COR</span> 
+            <span class="font-weight-bold pl-3 ">Peq</span>
+            <span class="font-weight-bold pl-4 ">Med</span>
+            <span class="font-weight-bold pl-4 ">Grd</span>
+              <p class="my-0">
+                 <button class="btn text-captalize bg-primary font-weight-bold" onclick="corBad()">Ver</button>
+                                <select name="" id="pBadA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mBadA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gBadA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="my-0">   
+                <button class="btn text-captalize bg-danger font-weight-bold"onclick="corBad1()">Ver</button>
+                                 <select name="" id="pBadR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mBadR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gBadR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="my-0">  
+              <button class="btn text-captalize bg-success font-weight-bold"onclick="corBad2()">Ver</button>
+                                 <select name="" id="pBadV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mBadV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gBadV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="mt-2">
+              <button class="btn bg-warning font-weight-bold"onclick="adcBad()">Adicionar</button>
+              <button class="btn bg-danger font-weight-bold"onclick="limpaBad()">Cancelar</button>
+            </p>  
+        </div>     
+      </div>
+
+
+      <!---final segundo produto--->
+   <!--=======================================-->
+     <!---inicio terceiro produto--->   
+   
+     <div class="card col-sm-12 col-md-4 col-lg-4 col-xl-3 p-3">
+         <div class="card-header text-white text-center bg-dark font-italic p-2">
+           <h4>Conjunto Malhação</h4>
+         </div>
+         <img id="imgConj"src="conj-rosa.jpg" class="card-img-top imgCart" alt="conjunto cor-de-rosa">
+  
+         <div class="card-text ">
+           <h6 class="pl-2 pt-3">Lançamento exclusivo verão 2020. <br>
+               Parcelamento em até 6x. <br>
+               Compra com seguro garantias. 
+           </h6>
+           
+            <h5 class="font-weight-bold text-center">
+                 R$ 300,00 / conjunto 
+           </h5>
+     <hr>  
+            <!---inicio pedidos conjunto malhacao--->
+              <div class="" id="pedidoAz">
+                <h6 class="font-weight-bold">
+                  Itens selecionados: 
+                </h6> 
+
+                <h6 class="font-weight-bold">
+                    <div> Total itens :  <span id="quantConj"></span> </div>
+                    <div> Valor :        <span id="valorConj"></span> </div>
+                  </h6>
+              </div>
+            <!---final pedidos conjunto malhacao --->
+         </div>
+
+         <div class="card-footer">
+         <h5 class="font-weight-bold"> Escolha a quantidade , e a Cor  : </h5>
+        
+            <span class="font-weight-bold pl-3 ">COR</span> 
+            <span class="font-weight-bold pl-3 ">Peq</span>
+            <span class="font-weight-bold pl-4 ">Med</span>
+            <span class="font-weight-bold pl-4 ">Grd</span>
+              <p class="my-0">
+                 <button class="btn text-captalize bg-primary font-weight-bold" onclick="corConj()">Ver</button>
+                                <select name="" id="pConjA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mConjA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gConjA" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="my-0">   
+                <button class="btn text-captalize bg-danger font-weight-bold"onclick="corConj1()">Ver</button>
+                                 <select name="" id="pConjR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mConjR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gConjR" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="my-0">  
+              <button class="btn text-captalize bg-success font-weight-bold"onclick="corConj2()">Ver</button>
+                                 <select name="" id="pConjV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select> 
+                                <select name="" id="mConjV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select>
+                                <select name="" id="gConjV" class="seletor"> 
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>  </select></p>
+             <p class="mt-2">
+              <button class="btn bg-warning font-weight-bold"onclick="adcConj()">Adicionar</button>
+              <button class="btn bg-danger font-weight-bold"onclick="limpaConj()">Cancelar</button>
+            </p>  
+        </div>     
+      </div>
+   <!--========final terceiro produto ==================-->  
+   <!---===============================--->
+   <!---inicio carrinho de compras--->   
+       <div class="card col-sm-12 col-md-4 col-lg-4 col-xl-3 p-3">
+          <div class="card-header text-white text-center bg-primary font-italic p-2">
+            <h4>Carrinho de Compras</h4>
+          </div>
+          <img src="calculadora.jpg" class="card-img-top imgCart" alt="vestido rosa" style="height: 200px;">
+          <div class="card-body">
+
+            <h5 class="card-title">Itens Selecionados:</h5>
+
+            <h6> <span id="itensTotaisVestido" class="font-weight-bold"></span> <span id="valorTotalVestido" class="pl-5 font-weight-bold"></span></h6>
+
+            <h6> 
+               <span id="itensTotaisBad" class="font-weight-bold pr-2"></span> <span id="valorTotalBad" class="pl-5 font-weight-bold"></span>
+            </h6>
+
+            <h6>
+              <span id="itensTotaisConj" class="font-weight-bold"></span> <span id="valorTotalConj" class="pl-3 font-weight-bold"></span>
+            </h6>
+          
+            <p>
+              <button class="btn text-captalize bg-success font-weight-bold mt-2"onclick="compraEfetuada()">Confirma Compra</button>
+              <button class="btn text-captalize bg-danger font-weight-bold mt-2"onclick="cancelaCompra()">Cancelar</button>
+              <button class="btn text-captalize bg-warning font-weight-bold mt-2"onclick="logar()">Fazer Login</button>
+            </p>  
+          </div>
+      </div> 
+<!--=======final carrinho compras=====-->
+<!--======================================================-->
+<!---fim row--->      
+  </div>
+</section>  
+<!--=======================================================-->
+<!--======================================================-->
+<section class="cinzaclaro py-4 px-3">
+  <!---===============---> 
+      <div class="row justify-content-center"> 
+        <h2 class=" p-3 font-italic "> Simulando interação em um Blog </h2> 
+      </div>
+  <!---====================================--->    
+      <div class="row justify-content-center bg-dark pl-3"> 
+        <h2 class=" py-3 font-italic text-white"> Blog do Blogador Blogado </h2> 
+      </div>
+      <div class="row ml-lg-5 mt-lg-3"> 
+        <h4 class=" p-3 font-italic "> 
+          Neste exemplo a simulação é feita através do preenchimento <br>
+          dos campos na parte lateral. <br>
+          Transferindo-os assim para outros campos , nese caso os da lateral <br>
+          esquerda. <br>
+          Para exemplificar manipulação de elementos e objetos da árvore <br>
+          do DOM (document object model) do html.
+        </h4> 
+      </div> 
+  <!---=============================== --->
+    <div class=" row  ">
+  <!---inicio sessao blog--->
+       <div class="card col-sm-12 col-md-7 col-lg-7 bg-white p-3 ml-lg-5">
+            <h2 class="mt-4" id="tituloBlog">{Aqui aparecerá seu Título}</h2>
+            <p class="lead">
+              autor :
+              <a href="eu.jpg"target="_blank" id="nome">{Aqui aparecerá o seu nome}</a>
+            </p>
+            <hr>
+            <img id="imgBlog" class="img-fluid rounded" src="" alt="imagem do blog"><hr>
+            <p class="lead" id="post">{Aqui aparecerá o texto do seu Post}</p>
+      </div>
+  <!---fim sessao blog--->    
+  
+  <!---inicio aside do blog---> 
+      <div class="card col-sm-12 col-md-5 col-lg-4 fundo bg-dark mt-0 mr-2 p-3">
+        <div class="card mt-2 py-3 px-2">
+          <h5 class="card-header fundo text-dark font-weight-bold"style="background:#999999;">Adicionar Título</h5>
+          <div class="card-body px-3 pt-5">
+            <div class="input-group">
+              <input type="text" id="titulo" class="form-control" placeholder="Seu título aqui">
+              <span class="input-group-btn">
+                <button onclick="postarTitulo()" class="btn btn-secondary" type="button">Postar!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      <div class="card my-0 py-3 px-2">  
+          <h5 class="card-header text-dark font-weight-bold fundo"style="background:#999999;">Nome do Blogueiro</h5>
+          <div class="card-body px-3 pt-5">
+            <div class="input-group">
+              <input type="text" id="nomeAutor" class="form-control" placeholder="Nome do Autor">
+              <span class="input-group-btn">
+                <button onclick="postarNome()" class="btn btn-secondary" type="button">Postar!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="card my-0 py-3 px-2"> 
+          <h5 class="card-header text-dark font-weight-bold fundo"style="background:#999999;">Escolha uma imagem</h5>
+          <div class="card-body px-3 pt-5">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button onclick="postarImagem1();" class="btn btn-secondary" type="button">Um</button>
+                <button onclick="postarImagem2();" class="btn btn-secondary" type="button">Dois</button>
+                <button onclick="postarImagem3();" class="btn btn-secondary" type="button">Tres</button>
+                <button onclick="limpaCampo();" class="btn btn-secondary" type="button">Limpar</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-0 pt-3 px-2"> 
+          <h5 class="card-header text-dark font-weight-bold" style="background:#999999;">Digite aqui seu Post</h5>
+          <div class="card-body px-3 pt-2">
+            
+              <div class="form-group">
+                <textarea id="texto" class="form-control" rows="3" placeholder="Texto do Blog"></textarea>
+              </div>
+              <button onclick="postarTexto()" class="btn btn-secondary">Postar!</button>
+              <button onclick="limpaTexto()" class="btn btn-secondary">Limpar!</button>
+            
+          </div>
+        </div> 
+      </div>
+
+
+   <!--=====================--->
+  <!---final aside do blog--->
+  <!--=====================---> 
+    </div>
+
+</section>
+
+
+<!--========== sessao contato =====-->
+ <section id="contato" class="coracordion">
+   <div class="col text-center">
+       <h3 class="text-center pt-3 font-italic ">
+        Contatos
+       </h3><br> 
+    </div>
+    <div class="row my-0 bg-light m-2">
+     <div class="col-sm-12 col-md-12 col-lg-6 my-0 p-5 coracordion">
+        <div class="card card-body bg-secondary">
+            <!-- titulo -->
+            <div class="card-title text-center text-white">
+               <h3 class="text-white">Preencha os campos abaixo</h3> 
+            </div>
+            <!-- final do titulo -->
+          <form action="_php/enviar.php" method="post"> 
+                <!-- formulario  -->
+            <div class="form-group mt-3">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="seu nome" required="">
+            </div> 
+            <!-- email  -->
+             <div class="form-group mt-3">
+                <input type="email" class="acessibilidade form-control" id="email" name="email" placeholder="seu email" required="" >
+            </div>    
+            <!-- telefone -->
+             <div class="form-group mt-3">
+                <input type="tel" class="form-control" placeholder="telefone" id="tel" name="tel" required="">
+            </div>
+            <div class="form-group mt-3">
+                <input type="text" class="form-control" placeholder="assunto" id="assunto" name="assunto" required="">
+            </div>
+            <div class="form-group mt-3">
+               <textarea class="form-control" id="msg" name="msg" rows="3" data-rule="required" data-msg="Digite aqui sua mensagem"></textarea>
+            </div>
+          <!--  <a href="#" data-toggle="tooltip" title="Este é um simples exemplo, <br> 
+    a pagina php não esta disponivel aqui no GitHub.">saiba mais</a>-->
+            <button type="submit" class="btn btn-outline-dark btn-block text-uppercase"><a class="text-white" href="#" data-toggle="tooltip" title="Este é um simples exemplo,
+            a pagina php não esta disponivel aqui no GitHub.">Enviar Mensagem</a></button>
+        </form>
+        </div>
+    </div>
+   <!-- google maps -->
+   <div class="col-md-12 col-md-12 col-lg-6  my-0 p-5 coracordion"> 
+    <div class="card card-body bg-white text-center ">
+      <iframe class="tam"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.518011761138!2d-46.53445328502115!3d-23.621612884653036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d496f2ba4f9%3A0xbaea9d2c6e9c826d!2sR.+Etrusca+-+Utinga%2C+Santo+Andr%C3%A9+-+SP%2C+09230-100!5e0!3m2!1spt-BR!2sbr!4v1565059203144!5m2!1spt-BR!2sbr" width="" height="370" frameborder="0" style="border:0" allowfullscreen></iframe><br>
+      <a href="#cabecalho" class="acessibilidade text-white btn btn-dark text-uppercase">  Inicio da Página
+      </a>
+     </div>
+    </div>
+  </div> 
+</section>
+<!--========== final sessao contato =====-->
+<!--=======================================-->
+<!--========== sessao redes sociais =====-->
+ <section class="container text-center ">
+
+  <h3 class=" mt-5 mb-3 font-italic ">Veja-me nas Redes Sociais</h3>
+   <p class="my-4">
+    <a href="https://www.linkedin.com/in/moises-franz" target="_blank"><img src="linkedin.png" alt="simbolo do linkedin"height="70" width="70"></a>
+   
+    <a href="https://www.facebook.com/siseureka/" target="_blank"><img src="facebook.png" class="ml-4" alt="simbolo do facebook" height="64" width="64"></a>
+  
+    <a href="#"><img src="github.png" class="ml-4" onclick="aviso( );"alt="simbolo do github"height="70" width="70"></a>
+   
+    <a href="#"><img src="instagram.png" class="ml-4" onclick="aviso( );"alt="simbolo do instagram"height="70" width="70"></a>
+   
+    <a href="#"><img src="social-tw.png" class="ml-4" onclick="aviso( );"alt="simbolo do Twitter"height="70" width="70"></a>
+   </p>
+ </section>
+<!--========== final sessao redes sociais=====-->
+<!--=======================================-->
+<!--========== inicio do footer ===========-->
+  <footer class="row rodape">
+     <!--endereços  -->
+         <div class="col-sm-10 col-md-6 col-lg-3 my-3">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+             <div class="card-body text-white">
+              <a href="#"><img src="home_ico.png" width="43" height="43" alt="imagem de uma casa"></a>
+               <h4 class="card-title text-capitalize">
+                 Endereços
+               </h4>
+              
+               <h6 class="card-text">
+                Rua Etrusca  <br>
+                Vila Metalúrgica 
+                Santo André - SP <br>    
+               </h6>  
+             </div> 
+           </div>   
+         </div>
+        <!-- final endereços  -->
+       <!--endereços  -->
+         <div class="col-sm-6 col-md-6 col-lg-3 my-3">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+             <div class="card-body text-white">
+              <a href="#"><img src="tel.png" width="43" height="43" alt="imagem de um telefone"></a>
+               <h4 class="card-title text-capitalize">
+                Telefones
+               </h4>
+               <h6 class="card-text">  
+                (xx) xxxxx - xxxx <br>
+                (xx) xxxxx - xxxx 
+               </h6> 
+           </div>
+          </div>   
+         </div>
+        <!-- final endereços  -->
+        <!--endereços  -->
+         <div class="col-sm-6 col-md-6 col-lg-3 py-3 ">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body text-white">
+              <a href="#"><img src="ema.png" width="43" height="43" alt="imagem de um envelope"></a>
+               <h4 class="card-title text-capitalize">E-mails</h4>
+               <h6 class="card-text">
+                mffranz@gmail.com <br>
+                mfsuportetecnico@gmail.com
+               </h6>
+           </div> 
+         </div>   
+         </div>
+        <!-- final endereços  -->
+        <!--endereços  -->
+         <div class="col-sm-6 col-md-6 col-lg-3 my-3">
+           <div class="card bg-dark">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body text-white">
+              <a href="#"><img src="cloc.png" width="43" height="43" alt="imagem de um relogio"></a>
+               <h4 class="card-title text-capitalize">Horários de Atendimento</h4>
+               <h6 class="card-text">
+                Segunda a Sexta <br>
+                08 : 00 as 18 : 00 
+               </h6>
+           </div> 
+         </div>   
+         </div>
+        <!-- final endereços  -->  
+        <h6 class="bg-transparent text-white ml-5 mt-0 mb-4 font-italic">
+            Copyright © Moises Franz 2020. Todos os direitos são reservados.
+        </h6> 
+</footer>
+<!-- Modal -->
+<div class="modal fade" id="meumodal" tabindex="-1" role="dialog" aria-labelledby="meumodal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="meumodal">Conhecendo mais.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <a href="timeeu.jpg"target="_blank"><img src="timeeu.jpg"  alt="foto Moises"></a>
+        <p>Para obter mais informações a meu respeito e <br>
+           também sobre meus projetos em andamentos, <br>
+           acesse minhas redes sociais. <br>
+           Obrigado.
+        </p>
+        <a href="https://www.facebook.com/siseureka/"target="_blank"><img src="facebook.png" width="56" height="56" alt="simbolo facebook"></a>
+
+         <a href="https://www.linkedin.com/in/moises-franz"target="_blank"><img src="linkedin.png"width="60" height="65"  alt="icone linkedin"></a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====final modal====-->
+<!--======================================================-->
+<!--======================================================-->
+
+<!-- primeiro por convenção jquery e segue a ordem abaixo -->
+<!--arquivos usados aqui para trabalhar offline quando online serão excluidos -->
+<script src="jquery-3.4.1.min.js"></script>  
+<script src="bootstrap.bundle.min.js"></script> 
+<script src="bootstrap.min.js"></script>
+
+<!-- arquivo js para fonte Awesome usada no meu site -->
+<script src="all.js"></script>
+<!-- ===============================================================================-->
+<!-- JavaScript (Opcional) -->
+<script src="meuJava.js"></script>
+<!--links para referencia do jQuery , Popper js, Bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <!--=====final objetos do body====================================================================-->
+</body>
+</html>
+ 
